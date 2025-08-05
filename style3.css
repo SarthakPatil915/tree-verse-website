@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.navabar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 100px;
+    background-color: #F5F5DC;
+    border: 1px solid grey ;
+    z-index: 1000;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Tree-Logo{
+    height: 65px;
+}
+.Name-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 27px;
+    width: 65px;
+}
+.Tree-Search{
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+}
+.Search-Bar{
+    height: 42px;
+    width: 400px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border:none;
+    border-left: none;
+    padding-left: 25px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1)
+    
+}
+.Search-Icon{
+    height: 42px;
+    border: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px ;
+    background-color: green;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1)
+}
+.Search-Icon:hover{
+    border: 2px solid black;
+    cursor: pointer;
+}
+.Option{
+    display: flex;
+    margin-top: 35px ;
+    gap: 25px;
+    font-weight:bold;
+}
+.sub-op{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.1)
+}
+.sub-op:hover{
+    background-color: #e6f5e6;
+    border: 2px solid green;
+    color: green;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+/* Main Body */
+
+.main-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-top: 115px;
+    gap: 20px;
+    height: auto;
+    padding-bottom: 20px;
+}
+.Contain{
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+.background-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    gap: 30px;
+    padding-bottom: 30px;
+    width: 1490px;
+    background-color: #cfe8c9;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+}
+.Heading-box{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 80px;
+    width: 1450px;
+    background-color: #a7d7c5;
+    box-shadow: 2px 2px 2px grey;
+    color: #1b4332;
+}
+.Logo{
+    height: 70px;
+    padding-left: 230px;
+    padding-right: 90px;
+}
+.box{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 1200px;
+    border-radius: 10px;
+    background-color: #e6f4e6;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: larger;
+}
+.Sub-Logo{
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 70px;
+    width: 70px;
+}
+.button{
+    height: 40px;
+    width: 130px;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: 50px;
+    box-shadow: 2px 2px 2px gray;
+}
+.button:hover{
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 0 8px rgba(0,128,0,0.1);
+}
+.Logo5{
+    height: 50px;
+    margin-left: 210px;
+    margin-right: 80px;
+}
+
+
+
+
+/* Footer */
+
+.foot{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: #026e00;
+    color: white;
+    border: 1px solid gray;
+    font-family: 'segoe UI',sans-serif;
+}
+.Footeer-logo{
+    height: 150px;
+}
+.footer-content {
+    width: 350px;
+    margin-top: 40px;
+    color: #cccccc;
+}
+.Links{
+    color: #cccccc;;
+}
+.Contact-Info{
+    color: #cccccc;
+}
+.Quick-Links {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #cccccc;
+}
+.Quick-Links a{
+    text-decoration: none;
+    color: #cccccc;
+}
+.Quick-Links a:hover{
+    color: black;
+}
+.Contact-Info{
+    font-family: Arial, HelveEtica, sans-serif;
+    font-size: 0.8rem;
+}
+.Follow{
+    color: #cccccc;
+}
+.Social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cccccc;
+}
+.Social-media img{
+    margin-top: 10px;
+    height: 30px;
+}
+.Developer{
+    font-weight: bold;
+    font-size: x-small;
+    color: #cccccc;
+    font-weight: bold;
+}
+.Copy-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 25px;
+    background-color: black;
+    color: #cccccc;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 780px) {
+    .navabar{
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Option{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 20px;
+        
+    }
+    .sub-op{
+        height: 25px;
+        width: 60px;
+        font-size: 0.6rem;
+        margin: none;
+    }
+    .Tree-Search{
+        padding-bottom: 15px;
+    }
+    .Search-Bar{
+        height: 35px;
+        width: 250px;
+    }
+    .Search-Icon{
+        height: 35px;
+        width: 35px;
+    }
+
+
+    /* Main Body */
+    .main-body{
+        padding-top: 240px;
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        
+    }
+    .Contain{
+        width: fit-content;
+        padding: 0 20px;
+        
+    }
+    .background-box{
+        width: auto;
+    }
+    .Heading-box{
+        height: 180px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 50px;
+        gap: 20px;
+        margin: 20px 20px;
+    }
+    .Logo{
+        padding-right:230px;
+    }
+    .Logo5{
+        padding-right: 130px;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+        width: 380px;
+        padding: 20px 20px;
+    }
+    h4{
+        font-size: 1.2rem;
+
+    }
+    .button{
+        height: 50px;
+        width: 130px;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 105px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    /* Footer */
+    .foot {
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .Footeer-logo{
+        height: 80px;
+    }
+    .footer-content{
+        font-size: 0.9rem;
+        color: #cccccc;
+    }
+    .foot-info{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+    }
+    .Links{
+        padding-top: 20px;
+        font-size: 0.8rem;
+    }
+    .Quick-Links{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 8px;
+        
+    }
+    .Contact-Info{
+        padding-top: 20px;
+    }
+    .Follow{
+        padding-top: 20px;
+        font-size: 0.8rem;
+    }
+    .Developer{
+        padding-bottom: 15px;
+    }
+    .Copy-right{
+        gap: 10px;
+        height: auto;
+        flex-direction: column;
+        padding: 10px 0;
+        font-size: 0.8rem;
+    }
+}

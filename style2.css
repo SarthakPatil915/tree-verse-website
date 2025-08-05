@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.navabar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 100px;
+    background-color: #F5F5DC;
+    border: 1px solid grey ;
+    z-index: 1000;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Tree-Logo{
+    height: 65px;
+}
+.Name-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 27px;
+    width: 65px;
+}
+.Tree-Search{
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+}
+.Search-Bar{
+    height: 42px;
+    width: 400px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border:none;
+    border-left: none;
+    padding-left: 25px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1)
+    
+}
+.Search-Icon{
+    height: 42px;
+    border: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px ;
+    background-color: green;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1)
+}
+.Search-Icon:hover{
+    border: 2px solid black;
+    cursor: pointer;
+}
+.Option{
+    display: flex;
+    margin-top: 35px ;
+    gap: 25px;
+    font-weight:bold;
+}
+.sub-op{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.1)
+}
+.sub-op:hover{
+    background-color: #e6f5e6;
+    border: 2px solid green;
+    color: green;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+/* main Body */
+
+.main-box{
+    height: auto;
+    width: 100%;
+    padding-top: 100px;
+}
+.sub-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 10px;
+    background-color: #dbebe3;
+    background-color: #f0f9f0;
+    margin: 15px;
+    box-shadow: 5px 5px 5px gray;
+}
+.card{
+    text-align: center;
+    background-color: #e0f7e9;
+    /* background-color: white; */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    height: 400px;
+    width: 350px;
+    margin: 30px;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+    
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.Img1{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border: 1px solid gray;
+    border-radius: 50% ;
+    background-color: white;
+    margin: 30px;
+}
+.btn{
+    margin-top: 30px;
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    size: 2rem;
+    font-weight: bold;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #45a049;
+}
+
+
+/* Footer */
+
+.foot{
+    margin-top: 15px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: #026e00;
+    color: white;
+    border: 1px solid gray;
+    font-family: 'segoe UI',sans-serif;
+}
+.Footeer-logo{
+    height: 150px;
+}
+.footer-content {
+    width: 350px;
+    margin-top: 40px;
+    color: #cccccc;
+}
+.Links{
+    color: #cccccc;;
+}
+.Contact-Info{
+    color: #cccccc;
+}
+.Quick-Links {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #cccccc;
+}
+.Quick-Links a{
+    text-decoration: none;
+    color: #cccccc;
+}
+.Quick-Links a:hover{
+    color: black;
+}
+.Contact-Info{
+    font-family: Arial, HelveEtica, sans-serif;
+    font-size: 0.8rem;
+}
+/* Social Media */
+.Follow{
+    color: #cccccc;
+}
+.Social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cccccc;
+}
+.Social-media img{
+    margin-top: 10px;
+    height: 30px;
+}
+.Developer{
+    font-weight: bold;
+    font-size: x-small;
+    color: #cccccc;
+    font-weight: bold;
+}
+.Copy-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 25px;
+    background-color: black;
+    color: #cccccc;
+    font-weight: bold;
+}
+
+
+
+
+
+
+@media (max-width: 780px) {
+    .navabar{
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Option{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 20px;
+        
+    }
+    .sub-op{
+        height: 25px;
+        width: 60px;
+        font-size: 0.6rem;
+        margin: none;
+    }
+    .Tree-Search{
+        padding-bottom: 15px;
+    }
+    .Search-Bar{
+        height: 35px;
+        width: 250px;
+    }
+    .Search-Icon{
+        height: 35px;
+        width: 35px;
+    }
+
+
+    /* Main Body */
+
+    .main-box{
+        padding-top:230px;
+    }
+    .sub-box{
+        height: auto;
+        width: auto;
+    }
+    .card {
+        height: 250px;
+        width: 200px;
+    }
+    .Img1{
+        height: 80px;
+        width: 80px;
+    }
+    h1{
+        font-size: 1rem;
+    }
+    .btn{
+        height: 30px;
+        width: 90px;
+    }
+
+
+    /* Footer */
+    .foot {
+        height: auto;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .Footeer-logo{
+        height: 80px;
+    }
+    .footer-content{
+        font-size: 0.9rem;
+        color: #cccccc;
+    }
+    .foot-info{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+    }
+    .Links{
+        padding-top: 20px;
+        font-size: 0.8rem;
+    }
+    .Quick-Links{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 8px;
+        
+    }
+    .Contact-Info{
+        padding-top: 20px;
+    }
+    .Follow{
+        padding-top: 20px;
+        font-size: 0.8rem;
+    }
+    .Developer{
+        padding-bottom: 15px;
+    }
+    .Copy-right{
+        gap: 10px;
+        height: auto;
+        flex-direction: column;
+        padding: 10px 0;
+        font-size: 0.8rem;
+    }
+}

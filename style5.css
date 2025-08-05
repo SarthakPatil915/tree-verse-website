@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.navabar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 100px;
+    background-color: #F5F5DC;
+    border: 1px solid grey ;
+    z-index: 1000;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Tree-Logo{
+    height: 65px;
+}
+.Name-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 27px;
+    width: 65px;
+}
+.Tree-Search{
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+}
+.Search-Bar{
+    height: 42px;
+    width: 400px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border:none;
+    border-left: none;
+    padding-left: 25px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1)
+    
+}
+.Search-Icon{
+    height: 42px;
+    border: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px ;
+    background-color: green;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1)
+}
+.Search-Icon:hover{
+    border: 2px solid black;
+    cursor: pointer;
+}
+.Option{
+    display: flex;
+    margin-top: 35px ;
+    gap: 25px;
+    font-weight:bold;
+}
+.sub-op{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.1)
+}
+.sub-op:hover{
+    background-color: #e6f5e6;
+    border: 2px solid green;
+    color: green;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Main box */
+
+/* --- General Page Styling --- */
+.contact-page-container {
+    /* This uses the light green color from your screenshot */
+    background-color: #dbebe3; /* A color close to your screenshot's green */
+    padding: 4rem 2rem;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-content {
+    padding-top: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content h1 {
+    font-size: 2.5rem;
+    color: #2c5c41; /* A darker green for titles */
+    margin-bottom: 1rem;
+}
+
+.contact-content > p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+}
+
+/* --- Main Wrapper for Form and Info --- */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures border-radius is respected by children */
+    text-align: left;
+}
+
+/* --- Contact Form Styling (Left Side) --- */
+.contact-form {
+    flex: 1; /* Takes up half the space */
+    padding: 2rem;
+    min-width: 300px;
+}
+
+.contact-form h3, .contact-info h3 {
+    font-size: 1.5rem;
+    color: #2c5c41;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #5d9c7d;
+    padding-left: 10px;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Important for padding and width calculation */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #5d9c7d; /* Highlight focus with a theme color */
+    box-shadow: 0 0 5px rgba(93, 156, 125, 0.5);
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #2c5c41; /* Dark green */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1e3e2c; /* Even darker green on hover */
+}
+
+/* --- Contact Info Styling (Right Side) --- */
+.contact-info {
+    flex: 1; /* Takes up the other half */
+    padding: 2rem;
+    background-color: #f4f7f6; /* A very light grey/green tint */
+    min-width: 300px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.info-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.info-list i {
+    font-size: 1.5rem;
+    color: #5d9c7d; /* Medium green for icons */
+    width: 40px; /* To ensure text aligns nicely */
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.info-list a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.info-list a:hover {
+    color: #2c5c41;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+/* --- Responsive Design for smaller screens --- */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    .contact-page-container {
+        padding: 2rem 1rem;
+    }
+}
+
+
+/* Footer Style */
+
+.foot{
+    /* margin-top: 15px; */
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: #026e00;
+    color: white;
+    border: 1px solid gray;
+    font-family: 'segoe UI',sans-serif;
+}
+.Footeer-logo{
+    height: 150px;
+}
+.footer-content {
+    width: 350px;
+    margin-top: 40px;
+    color: #cccccc;
+}
+.Links{
+    color: #cccccc;;
+}
+.Contact-Info{
+    color: #cccccc;
+}
+.Quick-Links {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #cccccc;
+}
+.Quick-Links a{
+    text-decoration: none;
+    color: #cccccc;
+}
+.Quick-Links a:hover{
+    color: black;
+}
+.Contact-Info{
+    font-family: Arial, HelveEtica, sans-serif;
+    font-size: 0.8rem;
+}
+
+/* Social Media */
+.Follow{
+    color: #cccccc;
+}
+.Social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cccccc;
+}
+.Social-media img{
+    margin-top: 10px;
+    height: 30px;
+}
+.Developer{
+    font-weight: bold;
+    font-size: x-small;
+    color: #cccccc;
+    font-weight: bold;
+}
+.Copy-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 25px;
+    background-color: black;
+    color: #cccccc;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 780px) {
+    /* Header */
+    .navabar{
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Option{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 20px;
+        
+    }
+    .sub-op{
+        height: 25px;
+        width: 60px;
+        font-size: 0.6rem;
+        margin: none;
+    }
+    .Tree-Search{
+        padding-bottom: 15px;
+    }
+    .Search-Bar{
+        height: 35px;
+        width: 250px;
+    }
+    .Search-Icon{
+        height: 35px;
+        width: 35px;
+    }
+    /* Main Body */
+
+
+
+
+    /* Footer */
+    .foot {
+        height: auto;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .Footeer-logo{
+        height: 80px;
+    }
+    .footer-content{
+        font-size: 0.9rem;
+        color: #cccccc;
+    }
+    .foot-info{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+    }
+    .Links{
+        padding-top: 20px;
+        font-size: 0.8rem;
+    }
+    .Quick-Links{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 8px;
+        
+    }
+    .Contact-Info{
+        padding-top: 20px;
+    }
+    .Follow{
+        padding-top: 20px;
+        font-size: 0.8rem;
+    }
+    .Developer{
+        padding-bottom: 15px;
+    }
+    .Copy-right{
+        gap: 10px;
+        height: auto;
+        flex-direction: column;
+        padding: 10px 0;
+        font-size: 0.8rem;
+    }
+}

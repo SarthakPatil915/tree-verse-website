@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.navabar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 100px;
+    background-color: #F5F5DC;
+    border: 1px solid grey ;
+    z-index: 1000;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Tree-Logo{
+    height: 65px;
+}
+.Name-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 27px;
+    width: 65px;
+}
+.Tree-Search{
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+}
+.Search-Bar{
+    height: 42px;
+    width: 400px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border:none;
+    border-left: none;
+    padding-left: 25px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1)
+    
+}
+.Search-Icon{
+    height: 42px;
+    border: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px ;
+    background-color: green;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1)
+}
+.Search-Icon:hover{
+    border: 2px solid black;
+    cursor: pointer;
+}
+.Option{
+    display: flex;
+    margin-top: 35px ;
+    gap: 25px;
+    font-weight:bold;
+}
+.sub-op{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.1)
+}
+.sub-op:hover{
+    background-color: #e6f5e6;
+    border: 2px solid green;
+    color: green;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* main Body */
+
+/* --- General About Page Styling --- */
+.about-page-container {
+    padding-top: 100px;
+    background-color: #dbebe3; /* Your existing light green background */
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- 1. Hero Section --- */
+.about-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1448375240586-882707db888b'); /* Example forest image */
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- 2. Features Grid Section --- */
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: #2c5c41; /* Dark green theme color */
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 i {
+    margin-right: 0.75rem;
+    color: #5d9c7d; /* Medium green theme color */
+}
+
+.feature-card ul {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+/* --- 3. Final Thought & CTA Section --- */
+.final-thought {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f4f7f6; /* A very light grey/green tint */
+}
+
+.final-thought h2 {
+    font-size: 2rem;
+    color: #2c5c41;
+    margin-bottom: 1.5rem;
+}
+
+.final-thought blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2.5rem auto;
+    border-left: 4px solid #5d9c7d;
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #2c5c41;
+    color: #ffffff;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px; /* Pill-shaped button */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1e3e2c;
+    transform: translateY(-3px);
+}
+
+
+
+/* Footer */
+
+.foot{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: #026e00;
+    color: white;
+    border: 1px solid gray;
+    font-family: 'segoe UI',sans-serif;
+}
+.Footeer-logo{
+    height: 150px;
+}
+.footer-content {
+    width: 350px;
+    margin-top: 40px;
+    color: #cccccc;
+}
+.Links{
+    color: #cccccc;;
+}
+.Contact-Info{
+    color: #cccccc;
+}
+.Quick-Links {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #cccccc;
+}
+.Quick-Links a{
+    text-decoration: none;
+    color: #cccccc;
+}
+.Quick-Links a:hover{
+    color: black;
+}
+.Contact-Info{
+    font-family: Arial, HelveEtica, sans-serif;
+    font-size: 0.8rem;
+}
+.Follow{
+    color: #cccccc;
+}
+.Social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cccccc;
+}
+.Social-media img{
+    margin-top: 10px;
+    height: 30px;
+}
+.Developer{
+    font-weight: bold;
+    font-size: x-small;
+    color: #cccccc;
+    font-weight: bold;
+}
+.Copy-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 25px;
+    background-color: black;
+    color: #cccccc;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 780px) {
+    .navabar{
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Option{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 20px;
+        
+    }
+    .sub-op{
+        height: 25px;
+        width: 60px;
+        font-size: 0.6rem;
+        margin: none;
+    }
+    .Tree-Search{
+        padding-bottom: 15px;
+    }
+    .Search-Bar{
+        height: 35px;
+        width: 250px;
+    }
+    .Search-Icon{
+        height: 35px;
+        width: 35px;
+    }
+    .about-page-container{
+        padding-top: 200px;
+    }
+
+
+    /* Main Body */
+
+    .main-body{
+        padding-top: 240px;
+        /* height: au
+        width: auto; */
+    }
+    .About-box{
+        height: auto;
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .About-section{
+        font-size: 0.8rem;
+
+    }
+    h2{
+        font-size: 0.8rem;
+    }
+
+
+    /* Footer */
+    .foot {
+        height: auto;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .Footeer-logo{
+        height: 80px;
+    }
+    .footer-content{
+        font-size: 0.9rem;
+        color: #cccccc;
+    }
+    .foot-info{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+    }
+    .Links{
+        padding-top: 20px;
+        font-size: 0.8rem;
+    }
+    .Quick-Links{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 8px;
+        
+    }
+    .Contact-Info{
+        padding-top: 20px;
+    }
+    .Follow{
+        padding-top: 20px;
+        font-size: 0.8rem;
+    }
+    .Developer{
+        padding-bottom: 15px;
+    }
+    .Copy-right{
+        gap: 10px;
+        height: auto;
+        flex-direction: column;
+        padding: 10px 0;
+        font-size: 0.8rem;
+    }
+}
