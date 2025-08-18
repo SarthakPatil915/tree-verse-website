@@ -371,7 +371,9 @@ a{
     }
     /* Main Body */
 
-
+    .contact-content{
+        padding-top: 240px;
+    }
 
 
     /* Footer */
