@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../cart.css">
 </head>
 <body>
     <header>
@@ -34,83 +34,32 @@
             <p style="font-size: 16px; color: #555; margin-top: 10px;">
             Enhance landscapes with shrubs prized for their attractive leaves and year-round greenery.
             </p>
-            <div class="sub-box">
-
-                <div class="cart">
-                <img class="img" src="Img/Lilyturf.png" alt="Lilyturf Img">
-                <h3>Lilyturf</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Polyscias-Fruticosa.png" alt="Polyscias-Fruticosa Img">
-                <h3>Polyscias Fruticosa</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Boardleaf-Lady-Palm.png" alt="Boardleaf Lady Palm Img">
-                <h3>Boardleaf Lady Palm</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Acalypha-wilkesiana.png" alt="Acalypha wilkesiana Img">
-                <h3>Acalypha wilkesiana</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Schefflera-Arboricola.png" alt="Schefflera Arboricola Img">
-                <h3>Schefflera Arboricola</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Philodendron-Selloum.png" alt="Philodendron Selloum Img">
-                <h3>Philodendron Selloum</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Hawaiian-Ti.png" alt="Hawaiian Ti Img">
-                <h3>Hawaiian Ti</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Aralia-Varigated.png" alt="Aralia Varigated Img">
-                <h3>Aralia Varigated</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Graptophyllum-Pictum.png" alt="Graptophyllum Pictum Img">
-                <h3>Graptophyllum Pictum</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Chandni-variegated.png" alt="Chandni variegated Img">
-                <h3>Chandni Variegated</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Carpodetus-Serratus.png" alt="Carpodetus Serratus Img">
-                <h3>Carpodetus Serratus</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Golden-Screw-Pine.png" alt="Golden Screw Pine Img">
-                <h3>Golden Screw Pine</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
+            <div class="sub-box" id="tree-list">
             </div>
         </div>
     </main>
+
+    <script>
+    fetch("foliage_shrubs.json")
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById("tree-list");
+            data.forEach(tree => {
+                const card = document.createElement("div");
+                card.classList.add("cart");
+                card.innerHTML = `
+                    <img class="img" src="${tree.image_url}" alt="${tree.common_name}">
+                    <h3>${tree.common_name}</h3>
+                    <button class="btn" onclick="viewTree('${tree.id}')">View Info</button>
+                `;
+                container.appendChild(card);
+            });
+        });
+
+    function viewTree(id) {
+        window.location.href = `foliage_shrub.html?id=${id}`;
+    }
+    </script>
     
     <footer>
         <div class="foot">

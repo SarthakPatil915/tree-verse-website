@@ -34,65 +34,32 @@
             <p style="font-size: 16px; color: #555; margin-top: 10px;">
             Flavor your dishes with popular kitchen herbs that bring fresh aromas and tastes to every recipe.
             </p>
-            <div class="sub-box">
-
-                <div class="cart">
-                <img class="img" src="Img/Oregano.png" alt="Oregano Img">
-                <h3>Oregano</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Marjoram.png" alt="Marjoram Img">
-                <h3>Marjoram</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Rosemary.png" alt="Rosemary Img">
-                <h3>Rosemary</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Thyme.png" alt="Thyme Img">
-                <h3>Thyme</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Sage.png" alt="Sage Img">
-                <h3>Sage</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Lavender.png" alt="Lavender Img">
-                <h3>Lavender</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Calendula.png" alt="Calendula Img">
-                <h3>Calendula</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Epazote.png" alt="Epazote Img">
-                <h3>Epazote</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Shiso.png" alt="Shiso Img">
-                <h3>Shiso</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
+            <div class="sub-box" id="tree-list"></div>
             </div>
         </div>
     </main>
+
+    <script>
+    fetch("culinary_herbs.json")
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById("tree-list");
+            data.forEach(tree => {
+                const card = document.createElement("div");
+                card.classList.add("cart");
+                card.innerHTML = `
+                    <img class="img" src="${tree.image_url}" alt="${tree.common_name}">
+                    <h3>${tree.common_name}</h3>
+                    <button class="btn" onclick="viewTree('${tree.id}')">View Info</button>
+                `;
+                container.appendChild(card);
+            });
+        });
+
+    function viewTree(id) {
+        window.location.href = `culinary_herb.html?id=${id}`;
+    }
+    </script>
     
     <footer>
         <div class="foot">

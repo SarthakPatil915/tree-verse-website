@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../cart.css">
 </head>
 <body>
     <header>
@@ -34,59 +34,31 @@
             <p style="font-size: 16px; color: #555; margin-top: 10px;">
             Identify plants that climb using tiny hooks or thorns to grip surfaces and support their growth.
             </p>
-            <div class="sub-box">
-
-                <div class="cart">
-                <img class="img" src="Img/pigweed.png" alt="pigweed Img">
-                <h3>Pigweed</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/pigweed.png" alt="pigweed Img">
-                <h3>Pigweed</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/pigweed.png" alt="pigweed Img">
-                <h3>Pigweed</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/pigweed.png" alt="pigweed Img">
-                <h3>Pigweed</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/pigweed.png" alt="pigweed Img">
-                <h3>Pigweed</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/pigweed.png" alt="pigweed Img">
-                <h3>Pigweed</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/pigweed.png" alt="pigweed Img">
-                <h3>Pigweed</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/pigweed.png" alt="pigweed Img">
-                <h3>Pigweed</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-            </div>
+            <div class="sub-box" id="tree-list"></div>
         </div>
     </main>
+
+    <script>
+    fetch("hook_climbers.json")
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById("tree-list");
+            data.forEach(tree => {
+                const card = document.createElement("div");
+                card.classList.add("cart");
+                card.innerHTML = `
+                    <img class="img" src="${tree.image_url}" alt="${tree.common_name}">
+                    <h3>${tree.common_name}</h3>
+                    <button class="btn" onclick="viewTree('${tree.id}')">View Info</button>
+                `;
+                container.appendChild(card);
+            });
+        });
+
+    function viewTree(id) {
+        window.location.href = `hook_climber.html?id=${id}`;
+    }
+    </script>
     
     <footer>
         <div class="foot">

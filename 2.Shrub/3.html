@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../cart.css">
 </head>
 <body>
     <header>
@@ -34,53 +34,31 @@
             <p style="font-size: 16px; color: #555; margin-top: 10px;">
             Explore shrubs used in traditional medicine for their therapeutic and health-boosting benefits.
             </p>
-            <div class="sub-box">
-
-                <div class="cart">
-                <img class="img" src="Img/Bitter-Leaf.png" alt="Bitter Leaf Img">
-                <h3>Bitter Leaf</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Henna.png" alt="Henna Img">
-                <h3>Henna</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Adhatoda.png" alt="Adhatoda Img">
-                <h3>Adhatoda</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Artemisia.png" alt="Artemisia Img">
-                <h3>Artemisia</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Senna.png" alt="Senna Img">
-                <h3>Senna</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Guava.png" alt="Guava Img">
-                <h3>Guava</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-                <div class="cart">
-                <img class="img" src="Img/Rosemary.png" alt="Rosemary Img">
-                <h3>Rosemary</h3>
-                <button class="btn">Click Me</button>
-                </div>
-
-            </div>
+            <div class="sub-box" id="tree-list"></div>
         </div>
     </main>
+
+    <script>
+    fetch("medicinal_shrubs.json")
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById("tree-list");
+            data.forEach(tree => {
+                const card = document.createElement("div");
+                card.classList.add("cart");
+                card.innerHTML = `
+                    <img class="img" src="${tree.image_url}" alt="${tree.common_name}">
+                    <h3>${tree.common_name}</h3>
+                    <button class="btn" onclick="viewTree('${tree.id}')">View Info</button>
+                `;
+                container.appendChild(card);
+            });
+        });
+
+    function viewTree(id) {
+        window.location.href = `medicinal_shrub.html?id=${id}`;
+    }
+    </script>
     
     <footer>
         <div class="foot">

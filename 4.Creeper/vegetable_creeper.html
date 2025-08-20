@@ -43,7 +43,7 @@
       const params = new URLSearchParams(window.location.search);
       const treeId = params.get("id");
 
-      fetch("perennial_herbs.json")
+      fetch("vegetable_creepers.json")
         .then((res) => res.json())
         .then((data) => {
           const tree = data[treeId];
@@ -51,7 +51,7 @@
             document.getElementById("tree-details").innerHTML = `
                         <div class="loading">
                             <p>Tree not found</p>
-                            <a href="3.html" class="back-button">← Back to Herbs</a>
+                            <a href="1.html" class="back-button">← Back to Creepers</a>
                         </div>
                     `;
             return;
@@ -155,7 +155,7 @@
                             </ul>
                         </div>
 
-                        <a href="3.html" class="back-button">← Back to Herbs</a>
+                        <a href="1.html" class="back-button">← Back to Creepers</a>
                     </div>
                 `;
         })
@@ -164,7 +164,7 @@
           document.getElementById("tree-details").innerHTML = `
                     <div class="loading">
                         <p>Failed to load tree details</p>
-                        <a href="3.html" class="back-button">← Back to Herbs</a>
+                        <a href="1.html" class="back-button">← Back to Creepers</a>
                     </div>
                 `;
         });
